@@ -1,0 +1,33 @@
+{
+  "name": "br.com.sompo.base-sample",
+  "version": "1.0.0",
+  "description": "Base Sample",
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
+    "@babel/preset-react": "^7.26.3",
+    "copy-webpack-plugin": "4.6.0",
+    "liferay-npm-build-support": "^2.31.2",
+    "liferay-npm-bundler": "^2.31.2",
+    "webpack": "4.29.6",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "3.2.1"
+  },
+  "scripts": {
+    "build": "npm run css && babel --source-maps -d build src && npm run copy-assets && liferay-npm-bundler && cp dist/*.jar ../../../../build/docker/deploy",
+    "copy-assets": "lnbs-copy-assets",
+    "css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/styles.css --minify",
+    "deploy": "npm run build && lnbs-deploy",
+    "start": "lnbs-start"
+  },
+  "portlet": {
+    "com.liferay.portlet.display-category": "SOMPO",
+    "com.liferay.portlet.header-portlet-css": "/css/styles.css",
+    "com.liferay.portlet.instanceable": true,
+    "javax.portlet.name": "base-sample",
+    "javax.portlet.display-name": "Base Sample",
+    "javax.portlet.security-role-ref": "power-user,user",
+    "javax.portlet.resource-bundle": "content.Language"
+  }
+}

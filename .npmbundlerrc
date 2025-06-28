@@ -1,0 +1,27 @@
+{
+  "create-jar": {
+    "output-dir": "dist",
+    "features": {
+      "js-extender": true,
+      "web-context": "/apolices-emitidas"
+    }
+  },
+  "dump-report": false,
+  "config": {
+    "imports": {
+      "react-shared-bundle": {
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "react-router-dom": "^6.16.0",
+        "axios": "^0.27.2",
+        "tailwindcss": "^4.0.14",
+        "react-pdf": "^5.7.2",
+        "@tailwindcss/cli": "^4.0.14",
+        "styled-components": "^6.1.16"
+      },
+      "": {
+        "react-shared-bundle": "^1.0.0"
+      }
+    }
+  }
+}
