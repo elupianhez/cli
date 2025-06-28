@@ -1,0 +1,23 @@
+{
+  "name": "@elupianhez/create-react-liferay-module",
+  "version": "1.11.0",
+  "description": "CLI utility for generating React-based portlet modules for Liferay",
+  "bin": {
+    "create-react-liferay-module": "./bin/index.js"
+  },
+  "keywords": [
+    "liferay",
+    "react",
+    "cli",
+    "module"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "fs-extra": "^11.1.1",
+    "inquirer": "^8.2.6",
+    "simple-git": "^3.21.0"
+  }
+}
