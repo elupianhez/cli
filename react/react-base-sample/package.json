@@ -15,7 +15,7 @@
     "webpack-dev-server": "3.2.1"
   },
   "scripts": {
-    "build": "npm run css && babel --source-maps -d build src && npm run copy-assets && liferay-npm-bundler && cp dist/*.jar ../../../../build/docker/deploy",
+    "build": "npm run css && babel --source-maps -d build src && npm run copy-assets && liferay-npm-bundler && cp dist/*.jar ../../../build/docker/deploy",
     "copy-assets": "lnbs-copy-assets",
     "css": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/styles.css --minify",
     "deploy": "npm run build && lnbs-deploy",

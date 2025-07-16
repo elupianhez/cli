@@ -29,17 +29,21 @@ export default function main(params) {
   const root = createRoot(container);
 
   root.render(
-    <StrictMode>
-        <GlobalSessionManager>
-            <ErrorBoundary>
-                <AppComponent
-                    portletNamespace={params.portletNamespace}
-                    contextPath={params.contextPath}
-                    portletElementId={params.portletElementId}
-                    configuration={params.configuration}
-                />
-            </ErrorBoundary>
-        </GlobalSessionManager>
-    </StrictMode>
+    <div className="conteudo-pagina">
+            <div className="conteudo-pagina-interno p-5">
+            <StrictMode>
+                <GlobalSessionManager>
+                    <ErrorBoundary>
+                        <AppComponent
+                            portletNamespace={params.portletNamespace}
+                            contextPath={params.contextPath}
+                            portletElementId={params.portletElementId}
+                            configuration={params.configuration}
+                        />
+                    </ErrorBoundary>
+                </GlobalSessionManager>
+            </StrictMode>
+        </div>
+    </div>
   );
 }
